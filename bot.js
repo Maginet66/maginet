@@ -32,7 +32,7 @@ msg.reply('iyi geceler, tatlı rüyalar.');
 	   //restart//
 if (msg.content.toLowerCase() === prefix + 'restart') {
 if (msg.author.id !== sahip) {
-msg.channel.sendMessage('Bot yeniden başlatılıyor...').then(msg => {
+msg.channel.sendMessage(`Bot yeniden başlatılıyor...`).then(msg => {
 console.log(`BOT: Bot yeniden başlatılıyor...`);
 process.exit(0);
  else {
