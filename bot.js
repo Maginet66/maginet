@@ -42,4 +42,4 @@ if (msg.author.id !== ayarlar.sahip) {
 }
 });
 
-client.login(ayarlar.token);
+client.login(process.env.BOT_TOKEN);
