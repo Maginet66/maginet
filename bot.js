@@ -17,7 +17,7 @@ msg.reply('Pong!');
 if (msg.content === prefix + 'avatar') {
 msg.reply(msg.author.avatarURL);
 }
-if (msg.content === 'sa') {
+if (msg.content.toLowerCase() === 'sa') {
 	  msg.reply('aleyküm selam kanka hoşgeldin.');
 }
 });
