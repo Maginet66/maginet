@@ -28,6 +28,16 @@ msg.reply('günaydın.');
 if (msg.content.toLowerCase() === 'iyi geceler') {
 msg.reply('iyi geceler, tatlı rüyalar.');
 }
+if (msg.content.toLowerCase() === prefix + 'restart') {
+if (msg.author.id !== sahip) {
+msg.reply('Buna yetkin bulunmamaktadır, sadece yöneticiler.');
+} else {
+msg.channel.sendMessage('Bot yeniden başlatılıyor...').then(msg => {
+console.log(`BOT: Bot yeniden başlatılıyor...`);
+process.exit(0);
+})
+}
+}
 });
 
 client.login(process.env.BOT_TOKEN);
