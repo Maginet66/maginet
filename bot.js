@@ -17,8 +17,17 @@ msg.reply('Pong!');
 if (msg.content === prefix + 'avatar') {
 msg.reply(msg.author.avatarURL);
 }
+	        //sa, yazısı//
 if (msg.content.toLowerCase() === 'sa') {
-	  msg.reply('aleyküm selam kanka hoşgeldin.');
+msg.reply('aleyküm selam hoşgeldin.');
+}
+	       //günaydın, yazısı//
+if (msg.content.toLowerCase() === 'günaydın') {
+msg.reply('günaydın.');
+}
+	      //iyi geceler, yazısı//
+if (msg.content.toLowerCase() === 'iyi geceler') {
+msg.reply('iyi geceler, tatlı rüyalar.');
 }
 });
 
