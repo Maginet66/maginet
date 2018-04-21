@@ -11,7 +11,7 @@ client.on('ready', () => {
 client.on('message', msg => {
 	           //.ping//
 if (msg.content === prefix + 'ping') {
-msg.reply('Pong!');
+msg.reply('Pingim: ** ' + client.ping + '** ms');
 }
                  //.avatar//
 if (msg.content === prefix + 'avatar') {
