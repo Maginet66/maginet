@@ -1,45 +1,33 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const ayarlar = require('./ayarlar.json');
 
-var prefix = ayarlar.prefix;
+var prefix = '.';
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', msg => {
-//.ping//
+	           //.ping//
 if (msg.content === prefix + 'ping') {
 msg.reply('Pingim: ** ' + client.ping + '** ms');
 }
-//.avatar//
+                 //.avatar//
 if (msg.content === prefix + 'avatar') {
 msg.reply(msg.author.avatarURL);
 }
-//sa, yazısı//
+	        //sa, yazısı//
 if (msg.content.toLowerCase() === 'sa') {
 msg.reply('aleyküm selam hoşgeldin.');
 }
-//günaydın, yazısı//
+	       //günaydın, yazısı//
 if (msg.content.toLowerCase() === 'günaydın') {
 msg.reply('günaydın.');
 }
-//iyi geceler, yazısı//
+	      //iyi geceler, yazısı//
 if (msg.content.toLowerCase() === 'iyi geceler') {
 msg.reply('iyi geceler, tatlı rüyalar.');
 }
-//restart//
-if (msg.content.toLowerCase() === prefix + 'restart') {
-if (msg.author.id !== ayarlar.sahip) {
-  msg.reply(`Buna yetkin bulunmamaktadır, sadece yöneticiler.`);
-} else {
-      msg.channel.sendMessage(`Bot yeniden başlatılıyor...`).then(msg => {
-      console.log(`BOT: Bot yeniden başlatılıyor...`);
-      process.exit(0);
-    })
-}
-}
 });
 
-client.login(ayarlar.token);
+client.login(process.env.BOT_TOKEN);
