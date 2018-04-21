@@ -9,14 +9,17 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-	//.ping//
-  if (msg.content === prefix + 'ping') {
-    msg.reply('Pong!');
-  }
-  //.avatar//
-  if (msg.content === prefix + 'avatar') {
-	  msg.reply(msg.author.avatarURL);
-  }
+	           //.ping//
+if (msg.content === prefix + 'ping') {
+msg.reply('Pong!');
+}
+                 //.avatar//
+if (msg.content === prefix + 'avatar') {
+msg.reply(msg.author.avatarURL);
+}
+if (msg.content === prefix + 'sa') {
+	  msg.reply('Aleyküm selam.');
+}
 });
 
 client.login(process.env.BOT_TOKEN);
