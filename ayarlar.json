@@ -1,5 +1,5 @@
 {
   "prefix": ".",
   "sahip": "153580497614798849",
-  "token": "BOT_TOKEN"
+  "token": "process.env.BOT_TOKEN"
 }
